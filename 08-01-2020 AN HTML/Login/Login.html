@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login Screen
+        </title>
+        <style>
+        body{
+            background-image: url(BG.jpg);
+            
+        }
+        div{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .ForgotPassword:hover{
+            color: red;
+        }
+        button:hover{
+            background-color:cyan;
+        }
+        .Login:hover{
+            cursor: pointer;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+        </style>
+        <!-- Google Font-->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet"> 
+        <!-- Materialise Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div style="text-align: center;margin-top: 10%;height: 320px;width:700px;margin-left: 25%;background-color: white;">
+            <img src="Logo.png" style="width: 60px;height: 60px;margin-top: 10px;" title="SaveWater.org"/>
+            <form style="padding:10px;">
+                <input type="email" placeholder="Email" style="width:300px;text-align: center;height:30px;font-family: 'PT Sans', sans-serif;"/><br/><br/>
+                <input type="password" placeholder="Password" style="width:300px;text-align: center;height:30px;font-family: 'PT Sans', sans-serif;"/><br/><br/>
+                <div class="Login" style="background-color: #2196F3;color: white;height: 30px;width:130px;padding-top: 8px;margin-left:40%;border-radius: 5px;font-family: 'PT Sans', sans-serif;"><a style="text-decoration: none;">LOGIN</a></div><br/>
+                <a href="#" style="font-size: 13px;font-family: 'PT Sans', sans-serif;" class="ForgotPassword">Forgot Password?</a><br/>            
+                <a href="https://www.facebook.com"><img src="facebook.png" title="Facebook" style="width: 20px;height:20px;margin-top: 7px;"/></a>
+                <a href="https://www.github.com"><img src="github.png" title="Github" style="width: 20px;height:20px;"/></a>
+                <a href="https://www.twitter.com"><img src="twitter.png" title="Twitter" style="width: 20px;height:20px;"/></a>
+                <p style="font-size: 10px;margin-top: -19px;margin-left: 80%;">&copy; 2020 AK.org</p>
+            </form>
+        </div>
+    </body>
+</html>
