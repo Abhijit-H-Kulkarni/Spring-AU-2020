@@ -1,0 +1,34 @@
+<style>
+  table{
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 10px;
+    width:100%;
+  }
+  th,td{
+    padding: 10px;
+    text-align:center;
+  }
+  .main{
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 255, .2);
+  }
+  .submit:hover {
+    cursor: pointer;
+  }
+</style>
+
+<p style="margin-top: 4%">The details are as below : </p>
+<div class="main" style="text-align: center;margin-top: 1%;margin-left: 3%; padding: 30px; height: 400px; width: 90%;">
+  <h1 *ngIf="data.length==0">There is no data in the table.</h1>
+  <table border="2" *ngIf="data.length!=0" >
+    <th>First Name</th>
+    <th>Second Name</th>
+    <th>Email</th>
+    <th>Action</th>
+    <tr *ngFor="let item of data">
+    <td *ngFor="let element of item" >{{ element }}</td>
+    <td style="width:70px;"><div class="submit" style="background-color: #FFA07A;height:25px;width: 150px;color:white;font-size: 12px;padding-top: 10px; border-radius: 5px;margin-left: 10px;" (click)="delete()">DELETE</div></td>
+    </tr>
+  </table>
+  <a style="text-decoration: none;" routerLink="/"><div class="details" style="background-color: #43D1AF;height:25px;width: 150px;color:white;font-size: 12px;padding-top: 10px; border-radius: 5px;margin-left: 45%;">HOME</div></a>
+</div>
