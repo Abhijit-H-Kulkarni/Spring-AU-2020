@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Login Screen
+        </title>
+        <script>
+            function varify(){
+                var username = document.getElementById("username").value;
+                var pwd = document.getElementById("psw").value;
+                var rpwd = document.getElementById("rpsw").value;
+                if(username == "" || pwd == "" || rpwd == "")
+                    window.alert("All the fields are mandatory! Please fill in all the details.");
+                else if(pwd!=rpwd)
+                    window.alert("Passwords don't match. Please re-enter the passwords.");
+                else{
+                    var capRegEx = /[A-Z]/;
+                    var smaRegEx = /[a-z]/;
+                    var splRegEx = /[$@*]/;
+                    var strRegEx = /abc/;
+                    if(pwd.length<8)
+                        window.alert("Password should contain atleast 8 characters.");
+                    else if(splRegEx.test(pwd)==false)
+                        window.alert("Password doesn't contain special characters.");
+                    else if(strRegEx.test(pwd)==false)
+                        window.alert("Password does not contain string abc.");
+                    else if((capRegEx.test(pwd) && smaRegEx.test(pwd)) == false)
+                        window.alert("Password does not contain Uppercase characters.");
+                    else{
+                        window.alert("All the information is correct. Task completed Successfully.");
+                        console.log("The information is as below :\nUsername : "+username+"\nPassword : "+pwd+"\nRetyped Password : "+rpwd);
+                    }
+                }
+            }
+        </script>
+        <style>
+        div{
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .ForgotPassword:hover{
+            color: red;
+        }
+        button:hover{
+            background-color:cyan;
+        }
+        .Login:hover{
+            cursor: pointer;
+        }
+        img:hover{
+            cursor: pointer;
+        }
+        </style>
+        <!-- Google Font-->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet"> 
+        <!-- Materialise Icons-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <div style="text-align: center;margin-top: 10%;height: 380px;width:700px;margin-left: 25%;background-color: white;">
+            <img src="Logo.png" style="width: 60px;height: 60px;margin-top: 10px;" title="SaveWater.org"/>
+            <form style="padding:10px;">
+                <input type="text" id="username" placeholder="Username" style="width:300px;text-align: center;height:30px;font-family: 'PT Sans', sans-serif;" autocomplete="off"/><br/><br/>
+                <input type="password" id="psw" placeholder="Password" style="width:300px;text-align: center;height:30px;font-family: 'PT Sans', sans-serif;" autocomplete="off"/><br/><br/>
+                <input type="password" id="rpsw" placeholder="Retype Password" style="width:300px;text-align: center;height:30px;font-family: 'PT Sans', sans-serif;" autocomplete="off"/><br/><br/>
+                <div class="Login" style="background-color: #2196F3;color: white;height: 30px;width:130px;padding-top: 8px;margin-left:40%;border-radius: 5px;font-family: 'PT Sans', sans-serif;" onclick="varify();"><a style="text-decoration: none;">LOGIN</a></div><br/>
+                <a href="#" style="font-size: 13px;font-family: 'PT Sans', sans-serif;" class="ForgotPassword">Forgot Password?</a><br/>            
+                <a href="https://www.facebook.com"><img src="facebook.png" title="Facebook" style="width: 20px;height:20px;margin-top: 7px;"/></a>
+                <a href="https://www.github.com"><img src="github.png" title="Github" style="width: 20px;height:20px;"/></a>
+                <a href="https://www.twitter.com"><img src="twitter.png" title="Twitter" style="width: 20px;height:20px;"/></a>
+                <p style="font-size: 10px;margin-top: -19px;margin-left: 80%;">&copy; 2020 AK.org</p>
+            </form>
+        </div>
+    </body>
+</html>

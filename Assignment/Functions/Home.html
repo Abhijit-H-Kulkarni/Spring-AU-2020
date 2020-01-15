@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Home Page
+        </title>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+        <style>
+            div {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            clear: both;
+            }
+
+            .container input {
+            width: 100%;
+            clear: both;
+            margin-top: 10px;
+            }
+            
+            .container select {
+            width: 102%;
+            clear: both;
+            margin-top: 10px;
+            }
+
+            .container button {
+                width: 102%;
+                clear: both;
+                margin-top: 10px; 
+            }
+            #names
+            {
+            white-space:pre-wrap;
+            }
+        </style>
+    </head>
+    <body style="background-color:white;font-family: 'PT Sans', sans-serif;">
+        <div id = "Main" class="container" style="height: 510px;width: 400px;background-color: white;padding: 50px;float:left;">
+            <label>Username : </label><input type="text" autocomplete="off"/><br/><br/>
+            <label>Country : </label>
+            <select id="Country">
+                <option>India</option>
+                <option>USA</option>
+                <option>Pakistan</option>
+                <option>Srilanka</option>
+            </select><br/><br/>
+            <label>Keyword : </label><input type="text" id="keyword" autocomplete="off"/><br/><br/>
+            <button style="margin-bottom: 10px;" onclick="find();" >SEARCH</button>
+            <label>Result : </label><div id="names" style="width:400px;height:180px;margin-top: 10px;padding: 10px;border-width: 2px;border-color: black;border-style: solid;"></div>
+            <p style="font-size: 10px;margin-left: 45%;">&copy; 2020 AK.org</p>
+            <script src="Home.js"></script>
+        </div>
+        <img src = "BG.jpg" style="height: 610px;width:62%;margin-left: 10px;float: right;"/>
+    </body>
+</html>
