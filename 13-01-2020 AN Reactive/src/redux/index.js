@@ -1,0 +1,1 @@
+export { GET_DETAILS } from './cake/cakeActions'
